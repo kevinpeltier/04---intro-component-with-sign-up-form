@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Comp Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="container-main">
+
+        <section class="welcome-msg" id="welcome-msg">
+            <h1>Learn to code by watching others</h1>
+            <p>See how experienced developers solve problems in real-time. 
+                Watching scripted tutorials is great, but understanding how developers think is invaluable. </p> 
+        </section>
+
+        <section class="signup-section">
+            <div class="advert" id="advert">
+                <p><span>Try it free 7 days</span> then 20/mo. thereafter</p>
+            </div>
+                
+            <form action="/" class="joinForm" id="joinForm" method="GET">
+
+                <div id="errorMsg">
+                    
+                </div>
+
+                <input type="text" name="firstname" placeholder="First Name" id="formFirstName" required>
+
+                <input type="text" name="lastname" placeholder="Last Name" id="formLastName" required>
+
+                <input type="email" name="email" id="formEmail" placeholder="Email Address" required>
+
+                <input type="password" name="password" id="formPassword" placeholder="Password" required>
+                <div id="passwordError"></div>
+
+                <button type="submit" class="signupSubmit" id="claimSubmit">
+                    CLAIM YOUR FREE TRAIL
+                </button>
+
+                <div class="termsSection">
+                    <p>
+                        By clicking the button you are agreeing to our <span>Terms and Services</span>
+                    </p>
+                </div>
+
+            </form>
+        </section>
+
+        
+        <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* General styles & Reset Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    font-family: Poppins;
+    color: #fff;
+}
+
+
+/* General Body Styles */
+
+body {
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(bg-intro-desktop.png);
+    /* height: 100svh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* component styling  */
+
+
+
+/* welcome message */
+
+.container-main { 
+    margin: 0 1.5rem;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.welcome-msg h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+}
+
+
+
+/* sign up section */
+
+.signup-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.advert {
+    background-color: hsl(248, 32%, 49%);
+    padding: 1.5rem 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 0 hsl(179 0 0 / .2);
+}
+
+.advert p span {
+    font-weight: 600;
+}
+
+.joinForm {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 .5rem 0 hsl(179 0 0 / .2);
+}
+
+.joinForm input {
+    text-align: left;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: .0125rem solid hsl(246, 25%, 77%);
+    font-weight: 600;
+    color: hsl(246, 25%, 77%);
+}
+
+.joinForm button {
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem 0;
+    font-weight: 600;
+}
+
+.refresh {
+    color: hsl(154, 59%, 51%);
+}
+
+.refresh b {
+    color: hsl(154, 59%, 51%);
+    font-weight: 700;
+}
+
+.termsSection {
+    display: flex;
+    justify-content: center;
+}
+
+.termsSection p {
+    font-size: .75rem;
+    color: hsl(246, 25%, 77%);
+    padding: .25rem 1rem;
+}
+
+.termsSection p span {
+    font-size: .75rem;
+    font-weight: 700;
+    color: hsl(154, 59%, 51%);
+}
+
+
+
+
+/* responive styling */
+
+
+@media only screen and (min-width: 475px) {
+
+    .welcome-msg h1 {
+        margin: 0 5rem 1.5rem 5rem;
+    }
+
+  }
+
+
+@media only screen and (min-width: 768px) {
+    body {
+      background-image: url(bg-intro-desktop.png);
+    }
+    .container-main { 
+
+        flex-direction: row;
+
+    }
+
+    .welcome-msg {
+        text-align: left;
+        max-width: 35rem;
+    }
+
+    .welcome-msg h1 {
+        font-size: 3rem;
+        margin: 0 0 1.5rem 0;
+        text-align: left;
+        line-height: 1.255;
+    }
+
+    .welcome-msg p {
+        text-align: left;
+    }
+
+  }
+
+
+
+
+
+  /* Error Message */
+
+  #firstNameError, #lastNameError, #emailError, #passwordError {
+    color: hsl(0, 100%, 50%);
+    font-weight: 700;
+    text-align: left;
+    font-size: .75rem;
+
+}
+
