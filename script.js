@@ -15,17 +15,20 @@ const span = document.getElementsByClassName("close")[0];
 
 claimButton.addEventListener('click', () => {
     let message = []
-
     
     if (password.value.length <= 6) {
-        message.push('Password must be more than 6 characters')
-        event.preventDefault();
+        message.push('Password must be more than 6 characters');
     } else {
-            formBody.innerHTML = 'Thank you for applying! <br> This is a test website for frontend only. <br>  <a href="index.html" class="refresh">Click Here to <b>Refresh!</b></a>';
+            formBody.innerHTML = 'Thank you for applying! <br><br> This is a test website for frontend only. <br><br>  <a href="index.html" class="refresh">Click Here to <b>Refresh!</b></a>';
             formBody.style.color = "hsl(154, 59%, 51%)";
             document.getElementById('welcome-msg').style.display = "none";
             document.getElementById('advert').style.display= "none";
         }
+
+    if (password.value.length < 6 && password.value.length > 0){
+        e.preventDefault();
+    }
+
 
     if (message.length > 0) {
         passwordError.innerText = message.join('')
