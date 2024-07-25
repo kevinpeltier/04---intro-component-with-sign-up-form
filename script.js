@@ -7,16 +7,20 @@ const email = document.getElementById('formEmail');
 const password = document.getElementById('formPassword');
 const formBody = document.getElementById('joinForm');
 const passwrdError = document.getElementById('passwordError');
+const modal = document.getElementById("termsModal")
+const termsBtn = document.getElementById("termsBtn");
+const span = document.getElementsByClassName("close")[0];
 
 
 
-claimButton.addEventListener('click', (e) => {
+claimButton.addEventListener('click', () => {
     let message = []
 
     
     if (password.value.length <= 6) {
         message.push('Password must be more than 6 characters')
-    }  else {
+        event.preventDefault();
+    } else {
             formBody.innerHTML = 'Thank you for applying! <br> This is a test website for frontend only. <br>  <a href="index.html" class="refresh">Click Here to <b>Refresh!</b></a>';
             formBody.style.color = "hsl(154, 59%, 51%)";
             document.getElementById('welcome-msg').style.display = "none";
@@ -27,17 +31,20 @@ claimButton.addEventListener('click', (e) => {
         passwordError.innerText = message.join('')
     }  
 
-    if (message.length >0) {
-        e.preventDefault()
-    } 
-
 })
 
 
 
+termsBtn.onclick = function() {
+  modal.style.display = "block";
+}
 
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-// formBody.innerHTML = 'Thank you for applying! <br> This is a test website for frontend only. <br>  <a href="index.html" class="refresh">Click Here to <b>Refresh!</b></a>';
-// formBody.style.color = "hsl(154, 59%, 51%)";
-// document.getElementById('welcome-msg').style.display = "none";
-// document.getElementById('advert').style.display= "none";
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
